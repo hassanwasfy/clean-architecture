@@ -11,6 +11,8 @@ import dagger.hilt.components.SingletonComponent
 @Module
 @InstallIn(SingletonComponent::class)
 object RepositoryModule {
+
     @Provides
     fun provideDomainRepository(domainRepositoryImpl: DomainRepositoryImpl): DomainRepository = domainRepositoryImpl
+
 }

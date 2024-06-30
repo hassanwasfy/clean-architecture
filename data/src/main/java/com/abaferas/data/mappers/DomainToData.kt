@@ -4,18 +4,18 @@ import com.abaferas.data.models.DataModel
 import com.abaferas.domain.model.DomainModel
 
 
-fun toDataModel(domainModel: DomainModel): DataModel {
+fun DomainModel.toDataModel(): DataModel {
     return DataModel(
-        domainModel.id,
-        domainModel.name,
+        this.id,
+        this.name,
         "",
         true
     )
 }
 
-fun toDomainModel(domainModel: DataModel): DomainModel {
+fun DataModel.toDomainModel(): DomainModel {
     return DomainModel(
-        domainModel.id,
-        domainModel.name,
+        this.id,
+        this.name,
     )
 }
